@@ -1,0 +1,29 @@
+create acoount & login
+
+7573989450
+test@123
+
+//than go developer setting 
+
+Go -> API KEY & GENERATE KEY 
+
+
+
+Getting Started
+
+
+payment Flow
+
+than opern website  ->steps 
+
+go with php kit & download zip file
+
+
+=============================
+
+open folder lib->config_paytm
+
+
+Mobile Number	77777 77777
+Password	Paytm12345
+OTP		489871
