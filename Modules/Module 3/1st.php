@@ -3,8 +3,8 @@
 <body>
 <?php
 
-$Physics = 95;
-$Chem = 85;
+$Physics = 99;
+$Chem = 95;
 $Bio = 74;
 $Maths = 64;
 $Computer = 53;
