@@ -112,7 +112,7 @@ else
 */
 
 
-
+/*
 $age=60
 switch($age)
 {
@@ -136,8 +136,8 @@ switch($age)
 	echo "a cond false";
 	break;	
 }
-
 */
+
 
 /*
 Difference between if elseif else  vs Switch

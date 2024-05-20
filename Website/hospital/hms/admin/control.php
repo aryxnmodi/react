@@ -210,7 +210,7 @@ class control extends model   // step 2
 					}
 				}
 						
-			case '/registration':
+			case 'registration':
 				
 				if(isset($_REQUEST['submit']))
 				{
@@ -234,23 +234,7 @@ class control extends model   // step 2
 					$arr=array("name"=>$name,"email"=>$email,"pass"=>$pass,
 					"gender"=>$gender,"file"=>$file,"cid"=>$cid,
 					"created_at"=>$created_at,"updated_at"=>$updated_at);
-					if
-					{
-						echo "<script> 
-						alert('Signup submit Success');
-						window.location='signup';
-						</script>";
-					}
-					else
-					{
-						echo "<script> 
-						alert('failed');
-						window.location='signup';
-						</script>";
-					}	
 				}
-				include_once('registration.php');
-			break;			
 		}
 	}
 }

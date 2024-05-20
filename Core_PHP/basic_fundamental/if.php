@@ -114,6 +114,7 @@ else
 
 
 $age=60
+/*
 switch($age)
 {
 	case "60":
