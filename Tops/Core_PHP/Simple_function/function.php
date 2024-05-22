@@ -50,7 +50,7 @@ sum()
 
 
 // return
-/*
+/
 function sum()
 {
 	return 5+7;
