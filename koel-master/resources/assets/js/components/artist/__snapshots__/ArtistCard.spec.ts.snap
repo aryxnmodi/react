@@ -1,0 +1,10 @@
+// Vitest Snapshot v1
+
+exports[`renders 1`] = `
+<article data-v-f01bdc56="" class="item full" draggable="true" tabindex="0" title="Led Zeppelin"><br data-v-f01bdc56="" data-testid="thumbnail" entity="[object Object]">
+  <footer data-v-f01bdc56="">
+    <div data-v-f01bdc56="" class="name"><a href="#/artist/42" class="text-normal" data-testid="name">Led Zeppelin</a></div>
+    <p data-v-f01bdc56="" class="meta"><a title="Shuffle all songs by Led Zeppelin" class="shuffle-artist" role="button"> Shuffle </a><a title="Download all songs by Led Zeppelin" class="download-artist" role="button"> Download </a></p>
+  </footer>
+</article>
+`;
