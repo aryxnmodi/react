@@ -4,7 +4,7 @@ use App\Http\Controllers\AdminController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
-testing push
+testing gpush
 Route::get('/', function () {
     return view('index');
 });
@@ -23,9 +23,8 @@ Route::get('/app', function () {
 
 Route::view('/services', 'services');
 
-// Route::get('/admin/',[AdminController::class,'index'])->name("admins");
-
-// Route::post('/admin/login',[AdminController::class,'authenticate_admin'])->name("admin_login");
+Route::get('/admin/',[AdminController::class,'index'])->name("admins");
+Route::post('/admin/login',[AdminController::class,'authenticate_admin'])->name("admin_login");
 
 Route::middleware(['auth', 'checksuperadmin'])->group(function () {
     Route::prefix('/admin')->group(function () {
