@@ -23,9 +23,9 @@ Route::get('/app', function () {
 
 Route::view('/services', 'services');
 
-// Route::get('/admin/',[AdminController::class,'index'])->name("admins");
+Route::get('/admin/',[AdminController::class,'index'])->name("admins");
 
-// Route::post('/admin/login',[AdminController::class,'authenticate_admin'])->name("admin_login");
+Route::post('/admin/login',[AdminController::class,'authenticate_admin'])->name("admin_login");
 
 Route::middleware(['auth', 'checksuperadmin'])->group(function () {
     Route::prefix('/admin')->group(function () {
