@@ -41,7 +41,7 @@
 </head>
 
 <body class="clinic_version">
-
+ 
 
     <!-- LOADER -->
     <div id="preloader">
@@ -59,12 +59,12 @@
                         <div class="info-inner">
                             <span class="icontop"><img src="{{ config('app.url') }}images/phone-icon.png" alt="#"></span>
                             <span class="iconcont"><a
-                                    href="tel:{{ $settings["phone"] ?? '9408970111' }}">{{ $settings["phone"] ?? '9408970111' }}</a></span>
+                                    href="tel:{{ $settings["phone"] ?? '123 123 123' }}">{{ $settings["phone"] ?? '123 123 123' }}</a></span>
                         </div>
                         <div class="info-inner">
                             <span class="icontop"><i class="fa fa-envelope" aria-hidden="true"></i></span>
                             <span class="iconcont"><a data-scroll
-                                    href="mailto:{{ $settings["email"] ?? 'hms@test.com' }}">{{ $settings["email"] ?? 'hms@test.com' }}</a></span>
+                                    href="mailto:{{ $settings["email"] ?? 'tauseed@test.com' }}">{{ $settings["email"] ?? 'tauseed@test.com' }}</a></span>
                         </div>
                         <div class="info-inner">
                             <span class="icontop"><i class="fa fa-clock-o" aria-hidden="true"></i></span>
@@ -92,7 +92,7 @@
                             <li onclick="check_active('Doctors')"><a id="Doctors" data-scroll
                                     href="{{ url('docters') }}">Doctors</a></li>
                             <li onclick="check_active('Departments')"><a id="Departments" data-scroll
-                                    href="{{ url('Departments') }}">Departments</a></li>
+                                    href="#departments">Departments</a></li>
                             <li onclick="check_active('About')"><a id="About" data-scroll
                                     href="{{ url('/about') }}">About us</a></li>
                             <li onclick="check_active('Contact')"><a id="Contact" data-scroll

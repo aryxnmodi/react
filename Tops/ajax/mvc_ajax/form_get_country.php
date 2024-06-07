@@ -16,10 +16,7 @@ function getState(cid)
 	{
 		xmlhttp= new XMLHttpRequest();	
 	}
-	else
-	{
-		xmlhttp= new ActiveXObject("Microsoft.XMLHTTP");	
-	}
+	
 	xmlhttp.onreadystatechange=function()
 	{
 		if(xmlhttp.readyState==4 && xmlhttp.status==200)
@@ -30,6 +27,7 @@ function getState(cid)
 xmlhttp.open("GET","statedata?btn=" + cid,true);
 xmlhttp.send();
 }
+
 function getCity(sid)
 {
 	$.ajax

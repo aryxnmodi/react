@@ -41,10 +41,6 @@ Flickr, and so many other applications.
 <p id="demo"></p>
 
 <button type="button" onclick="loadDoc()">Change Content</button>
-
-
-
-
 <script>
 
 
@@ -64,44 +60,23 @@ function loadDoc()
     // code for IE6, IE5
     xhttp = new ActiveXObject("Microsoft.XMLHTTP");
   }
-  
-//The readyState property holds the status of the XMLHttpRequest.
-
-//The onreadystatechange property defines a function to be executed when the readyState changes.
-
-//The status property and the statusText property holds the status of the XMLHttpRequest object.
-
-/*  
-readyState	Holds the status of the XMLHttpRequest.
-0: request not initialized
-1: server connection established
-2: request received
-3: processing request
-4: request finished and response is ready
-
-status	Returns the status-number of a request
-200: "OK"
-403: "Forbidden"
-404: "Not Found"
-*/
-/*
+ 
    xhttp.onreadystatechange = function() 
    {  
 	   if(xhttp.readyState==4 || xhttp.status==200)
 	   {
-		   //The responseText property returns the server response as a JavaScript string, and you can use it accordingly:
+		  
 		   document.getElementById("demo").innerHTML=this.responseText;
 	   }
    }
-//To send a request to a server, we use the open() and send() methods of the XMLHttpRequest object:
   xhttp.open("GET", "data.php", true);
   xhttp.send();
 }
 */
 
-
 //===========================================================================================================
 // Jquery ajax
+
 
 /*
 $(document).ready(function()
@@ -116,14 +91,14 @@ $(document).ready(function()
 */
 
 
-
+/*
 
  $(document).ready(function(){
   $("button").click(function(){
     $("#demo").load("data.php");
   });
 });
-
+*/
 
 
 

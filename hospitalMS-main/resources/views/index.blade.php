@@ -6,7 +6,7 @@
          <div class="col-md-12 col-sm-12">
             <div class="text-contant">
                <h2>
-                  <span class="center"><span class="icon"><img src="{{ ($app) ? config('app.url').'storage/'. $app->icon_logo_path:'"C:\Users\hp\Downloads\download.jpg"' }}" alt="#" /></span></span>
+                  <span class="center"><span class="icon"><img src="{{ ($app) ? config('app.url').'storage/'. $app->icon_logo_path:'images/icon-logo.png' }}" alt="#" /></span></span>
                   <a href="" class="typewrite" data-period="2000" data-type='[ "Welcome to Life Care", "We Care Your Health", "We are Expert!" ]'>
                   <span class="wrap"></span>
                   </a>
@@ -59,7 +59,7 @@
 <div id="about" class="section wow fadeIn">
    <div class="container">
       <div class="heading">
-         <span class="icon-logo"><img src="{{ ($app) ? 'storage/'.$app->icon_logo_path:"C:\Users\hp\Downloads\download.jpg" }}" alt="#"></span>
+         <span class="icon-logo"><img src="{{ ($app) ? 'storage/'.$app->icon_logo_path:'images/icon-logo.png' }}" alt="#"></span>
          <h2>The Specialist Clinic</h2>
       </div>
       <!-- end title -->
@@ -259,7 +259,7 @@
   </div><!-- end container -->
 </div>
 
-<div id="price" class="section pr wow fadeIn" style="background-image:url('images/price-bg.png');">
+{{-- <div id="price" class="section pr wow fadeIn" style="background-image:url('images/price-bg.png');">
    <div class="container">
       <div class="row">
          <div class="col-md-12">

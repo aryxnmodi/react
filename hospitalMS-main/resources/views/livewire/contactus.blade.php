@@ -45,7 +45,13 @@
                     </div>
                 </div>
             </form>
-            </div>
+            @if (session()->has('message'))
+                <script>
+                    alert(' {{ session('message') }}')
+
+                </script>
+            @endif
+        </div>
         <div id="googleMap" style="width:100%;height:450px;"></div>
     </div>
 </div>
