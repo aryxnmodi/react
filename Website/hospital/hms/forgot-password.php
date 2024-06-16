@@ -54,26 +54,26 @@ echo "<script>window.location.href ='forgot-password.php'</script>";
 								Patient Password Recovery
 							</legend>
 							<p>
-								Please enter your Email and password to recover your password.<br/>
+								Please enter your Email and password to recover your password.<br />
 					
 							</p>
 
 							<div class="form-group form-actions">
 								<span class="input-icon">
-									<input type="text" class="form-control" name="fullname" placeholder="Registred Full Name" required>
+									<input type="text" class="form-control" name="fullname" placeholder="Registred Full Name">
 									<i class="fa fa-lock"></i>
 									 </span>
 							</div>
 
 							<div class="form-group">
 								<span class="input-icon">
-									<input type="email" class="form-control" name="email" placeholder="Registred Email" required>
+									<input type="email" class="form-control" name="email" placeholder="Registred Email">
 									<i class="fa fa-user"></i> </span>
 							</div>
 
 							<div class="form-actions">
 								
-								<button type="submit" class="btn btn-danger pull-right" name="submit">
+								<button type="submit" class="btn btn-primary pull-right" name="submit">
 									Reset <i class="fa fa-arrow-circle-right"></i>
 								</button>
 							</div>

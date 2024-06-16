@@ -26,8 +26,8 @@ else
 $uip=$_SERVER['REMOTE_ADDR'];
 $status=0;
 mysqli_query($con,"insert into doctorslog(username,userip,status) values('$uname','$uip','$status')");
-$_SESSION['errmsg']="Invalid username or password";
-header("location:index.php");
+echo "<script>alert('Invalid username or password');</script>";
+echo "<script>window.location.href='index.php'</script>";
 
 }
 }
@@ -69,12 +69,12 @@ header("location:index.php");
 							</p>
 							<div class="form-group">
 								<span class="input-icon">
-									<input type="text" class="form-control" name="username" placeholder="Username">
+									<input type="text" class="form-control" name="username" placeholder="Email" required>
 									<i class="fa fa-user"></i> </span>
 							</div>
 							<div class="form-group form-actions">
 								<span class="input-icon">
-									<input type="password" class="form-control password" name="password" placeholder="Password">
+									<input type="password" class="form-control password" name="password" placeholder="Password" required>
 									<i class="fa fa-lock"></i>
 									 </span>
 									 <a href="forgot-password.php">

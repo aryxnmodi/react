@@ -105,8 +105,7 @@ while($row=mysqli_fetch_array($sql))
 </td>
 <td>
 
-<a href="edit-patient.php?editid=<?php echo $row['ID'];?>"><i class="fa fa-edit"></i></a> || <a href="view-patient.php?viewid=<?php echo $row['ID'];?>"><i class="fa fa-eye"></i></a>
-
+<a href="edit-patient.php?editid=<?php echo $row['ID'];?>" class="btn btn-primary btn-sm" target="_blank">Edit</a> <a href="view-patient.php?viewid=<?php echo $row['ID'];?>" class="btn btn-warning btn-sm" target="_blank">View Details</a>
 </td>
 </tr>
 <?php 

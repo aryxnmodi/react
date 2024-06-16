@@ -20,7 +20,7 @@ $sql=mysqli_query($con,"insert into tblpatient(Docid,PatientName,PatientContno,P
 if($sql)
 {
 echo "<script>alert('Patient info added Successfully');</script>";
-header('location:add-patient.php');
+echo "<script>window.location.href ='manage-patient.php'</script>";
 
 }
 }

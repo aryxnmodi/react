@@ -1,5 +1,4 @@
-<?php
-session_start();
+<?php session_start();
 error_reporting(0);
 include("include/config.php");
 if(isset($_POST['submit']))
@@ -27,9 +26,9 @@ $_SESSION['login']=$_POST['username'];
 $uip=$_SERVER['REMOTE_ADDR'];
 $status=0;
 mysqli_query($con,"insert into userlog(username,userip,status) values('$puname','$uip','$status')");
-$_SESSION['errmsg']="Invalid username or password";
 
-header("location:user-login.php");
+echo "<script>alert('Invalid username or password');</script>";
+echo "<script>window.location.href='user-login.php'</script>";
 }
 }
 ?>
@@ -70,12 +69,12 @@ header("location:user-login.php");
 							</p>
 							<div class="form-group">
 								<span class="input-icon">
-									<input type="text" class="form-control" name="username" placeholder="Username">
+									<input type="email" class="form-control" name="username" placeholder="Email" required>
 									<i class="fa fa-user"></i> </span>
 							</div>
 							<div class="form-group form-actions">
 								<span class="input-icon">
-									<input type="password" class="form-control password" name="password" placeholder="Password">
+									<input type="password" class="form-control" name="password" placeholder="Password" required>
 									<i class="fa fa-lock"></i>
 									 </span><a href="forgot-password.php">
 									Forgot Password ?
@@ -110,7 +109,7 @@ header("location:user-login.php");
 		<script src="vendor/jquery-cookie/jquery.cookie.js"></script>
 		<script src="vendor/perfect-scrollbar/perfect-scrollbar.min.js"></script>
 		<script src="vendor/switchery/switchery.min.js"></script>
-		<script src="vendor/jquery-validation/jquery.validate.min.js"></script>
+		<!-- <script src="vendor/jquery-validation/jquery.validate.min.js"></script> -->
 	
 		<script src="assets/js/main.js"></script>
 
@@ -123,5 +122,5 @@ header("location:user-login.php");
 		</script>
 	
 	</body>
-	
+	<!-- end: BODY -->
 </html>
