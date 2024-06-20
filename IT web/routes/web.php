@@ -55,7 +55,8 @@ Route::post('/user_auth',[CustomerController::class,'user_auth']);
 Route::get('/userlogout',[CustomerController::class,'userlogout']);
 
 Route::get('/profile',[CustomerController::class,'show']);
-
+Route::get('/profile/{id}',[CustomerController::class,'edit']);
+Route::post('/update/{id}',[CustomerController::class,'update']);
 
 
 

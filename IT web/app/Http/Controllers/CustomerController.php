@@ -145,9 +145,11 @@ class CustomerController extends Controller
      * @param  \App\Models\customer  $customer
      * @return \Illuminate\Http\Response
      */
-    public function edit(customer $customer)
+    public function edit(customer $customer,$id)
     {
-        //
+        $country=country::all();
+        $data=customer::find($id);
+        return view('website.edit_profile',["arr_countries"=>$country,"fetch"=>$data]);
     }
 
     /**
@@ -157,9 +159,35 @@ class CustomerController extends Controller
      * @param  \App\Models\customer  $customer
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, customer $customer)
+    public function update(Request $request, $id,customer $customer)
     {
-        //
+        $data=customer::find($id);
+
+       
+ 
+         $data->name=$request->name;
+         $data->email=$request->email;
+         $data->gender=$request->gender;
+         $data->lag=implode(",",$request->lag);
+         $data->mobile=$request->mobile;
+         
+         // image upload
+         if($request->hasFile('img'))
+         {
+            $old_img=$data->img;
+           
+            $file=$request->file('img');	 // get file	
+            $filename=time()."_img.".$file->getClientOriginalExtension(); // extension with new name
+            $file->move('website/upload/customer/',$filename);  // use move for move image in public/images
+            $data->img=$filename;
+            unlink('website/upload/customer/'.$old_img);
+         }
+
+         $data->cid=$request->cid;
+         $data->update();
+         Alert::success('Congrats', 'You\'ve Successfully Updated User');
+         return redirect('/profile');
+
     }
 
     /**
