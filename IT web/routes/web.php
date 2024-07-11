@@ -46,41 +46,44 @@ Route::get('/it_blog', function () {
 Route::get('/it_contact',[ContactController::class,'create']);
 Route::post('/it_contact',[ContactController::class,'store']);
 
-Route::get('/signup',[CustomerController::class,'create']);
-Route::post('/signup',[CustomerController::class,'store']);
+Route::get('/signup',[CustomerController::class,'create'])->middleware('user_before');
+Route::post('/signup',[CustomerController::class,'store'])->middleware('user_before');
 
-Route::get('/login',[CustomerController::class,'user_login']);
-Route::post('/user_auth',[CustomerController::class,'user_auth']);
+Route::get('/login',[CustomerController::class,'user_login'])->middleware('user_before');
+Route::post('/user_auth',[CustomerController::class,'user_auth'])->middleware('user_before');
 
-Route::get('/userlogout',[CustomerController::class,'userlogout']);
 
-Route::get('/profile',[CustomerController::class,'show']);
-Route::get('/profile/{id}',[CustomerController::class,'edit']);
-Route::post('/update/{id}',[CustomerController::class,'update']);
+// apply route middleware
+Route::get('/userlogout',[CustomerController::class,'userlogout'])->middleware('user_after');
+
+Route::get('/profile',[CustomerController::class,'show'])->middleware('user_after');
+Route::get('/profile/{id}',[CustomerController::class,'edit'])->middleware('user_after');
+Route::post('/update/{id}',[CustomerController::class,'update'])->middleware('user_after');
 
 
 
 // Admin
 
-Route::get('/admin_login',[AdminController::class,'admin_login']);
-Route::post('/admin_auth',[AdminController::class,'admin_auth']);
-Route::get('/adminlogout',[AdminController::class,'adminlogout']);
-
-Route::get('/manage_user',[CustomerController::class,'index']);
-Route::get('/manage_user/{id}',[CustomerController::class,'destroy']);
-
-Route::get('/dashboard', function () {
-    return view('admin.dashboard');
+Route::group(['middleware'=>['admin_before']],function(){
+    Route::get('/admin_login',[AdminController::class,'admin_login']);
+    Route::post('/admin_auth',[AdminController::class,'admin_auth']);
 });
 
 
-Route::get('/add_categories',[CategoryController::class,'create']);
-Route::get('/manage_categories',[CategoryController::class,'index']);
-Route::get('/manage_categories/{id}',[CategoryController::class,'destroy']);
+Route::group(['middleware'=>['admin_after']],function(){
 
-Route::get('/manage_contact',[ContactController::class,'index']);
-Route::get('/manage_contact/{id}',[ContactController::class,'destroy']);
-
-Route::get('/add_product',[ProductController::class,'create']);
-Route::get('/manage_product',[ProductController::class,'index']);
-Route::get('/manage_product/{id}',[ProductController::class,'destroy']);
+    Route::get('/adminlogout',[AdminController::class,'adminlogout']);
+    Route::get('/manage_user',[CustomerController::class,'index']);
+    Route::get('/manage_user/{id}',[CustomerController::class,'destroy']);
+    Route::get('/dashboard', function () {
+        return view('admin.dashboard');
+    });
+    Route::get('/add_categories',[CategoryController::class,'create']);
+    Route::get('/manage_categories',[CategoryController::class,'index']);
+    Route::get('/manage_categories/{id}',[CategoryController::class,'destroy']);
+    Route::get('/manage_contact',[ContactController::class,'index']);
+    Route::get('/manage_contact/{id}',[ContactController::class,'destroy']);
+    Route::get('/add_product',[ProductController::class,'create']);
+    Route::get('/manage_product',[ProductController::class,'index']);
+    Route::get('/manage_product/{id}',[ProductController::class,'destroy']);
+});

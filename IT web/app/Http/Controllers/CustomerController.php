@@ -7,6 +7,12 @@ use App\Models\country;
 use Illuminate\Http\Request;
 use Hash;
 use Alert;
+
+// add below two lines for mail
+use App\Mail\welcomemail;
+use Mail;
+
+
 class CustomerController extends Controller
 {
     /**
@@ -107,8 +113,8 @@ class CustomerController extends Controller
         ]);
 
         $data=new customer();
-        $data->name=$request->name;
-        $data->email=$request->email;
+ $name=$data->name=$request->name;
+ $email=$data->email=$request->email;
         $data->password=Hash::make($request->password);
         $data->gender=$request->gender;
         $data->lag=implode(",",$request->lag);
@@ -122,6 +128,10 @@ class CustomerController extends Controller
         $data->img=$filename;
         $data->cid=$request->cid;
         $data->save();
+
+        $data=array("email"=>$email,"name"=>$name);
+        Mail::to($email)->send(new welcomemail($data));
+
         Alert::success('Congrats', 'You\'ve Successfully Registered');
         return redirect('/signup');
     }

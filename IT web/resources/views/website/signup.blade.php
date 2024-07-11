@@ -1,10 +1,4 @@
-<?php
-if(session()->has('id')) {
-  echo "<script> 
-		window.location='index';
-		</script>";
-}
-?>
+
 @extends('website.layout.layout');
 
 @section('main_section')
