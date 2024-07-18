@@ -1,0 +1,98 @@
+Migration: 
+Migrations are like version control for your database, allowing your team to define and share the application's database schema definition. If you have ever had to tell a teammate to manually add a column to their local database schema after pulling in your changes from source control, you've faced the problem that database migrations solve.
+The Laravel Schema facade provides database agnostic support for creating and manipulating tables across all of Laravel's supported database systems. Typically, migrations will use this facade to create and modify database tables and columns.
+php artisan config:Cache  
+cache reconfig for our db connection if error occurs 
+============================================================================
+php artisan make:migration create_posts_table
+php artisan make: migration create_posts_table --create=posts    // with structure 
+
+Php artisan migrate
+
+
+
+
+
+
+
+
+public function up()
+    {
+        Schema::create('clients', function (Blueprint $table) {
+           $table->id();//$table->increments('id');
+		or
+$table->id(‘custome_id’);  // you can also add custom id
+		
+// it provide default created_at/ updated_at column by default
+           $table->timestamps();
+
+$table->integer('votes');
+		$table->string('username'); // default size 255
+		$table->char('name', 100)->nullable();
+$table->char('name', 100)->index();
+		$table->char('name', 100)->unique();
+		$table->text('description1');
+		$table->longText('description');
+		$table->timeTz('sunrise', $precision = 0);
+		$table->dateTimeTz('created_at1', $precision = 0);
+		$table->double('amount1', 8, 2);
+		$table->float('amount', 8, 2);		$table->enum('status',['Block','Unblock'])->default('Unblock');
+		$table->bigInteger('mobile');
+
+$table->unsignedBigInteger('cate_id');  // foreign key declare		$table->foreign(‘cate_id’)->references(‘id’)->on(‘categories’);
+
+$table->foreign('user_id')->references('id')->on('users')->onDelete('cascade')
+
+Or
+
+Laravel 7
+
+$table->foreignId(‘category_id’)->constrained()->onDelete(‘cascade’); 
+
+});
+}
+         
+Note : if any error occurs in migrate then follow below rules
+Go => config/database.php     remove mb4
+
+
+
+
+=====================================================================
+Add column after create table 
+	php artisan make:migration create_countries_table
+	php artisan make:migration add_columns_to_countries 
+
+Then its create again new migration file for customer then add remaining field in new generated migration file
+
+$table->string(‘country’,60)->nullable()->after(‘address’);
+$table->string(‘state’,50)->nullable()->after(‘state’);
+
+php artisan migrate:make add_columns_to_countries
+
+php artisan migrate
+
+========================================================================
+
+
+  php artisan migrate:status : like to see which migrations have run thus far
+  php artisan migrate --force
+  php artisan migrate:rollback   // only one roleback
+  php artisan migrate:rollback --step=4
+  php artisan migrate:reset     : command will roll back all of your application's 
+
+migrations
+
+php artisan migrate:refresh   :command will roll back all of your migrations and then execute the migrate command. This command effectively re-creates your entire database:  // rollback and fresh migration
+	
+           php artisan migrate:fresh     :The migrate:fresh command will drop all tables from the database and then execute the migrate command:
+
+
+
+
+========================================================================
+For database connectivity you can use any DB software from 
+Config/database.php    ===
+Default  mysql / sqlite / pgsql / sqlsrv / 
+DB Connectivity: Go in .env file set DB name / Then migration new connectivity new Catch
+

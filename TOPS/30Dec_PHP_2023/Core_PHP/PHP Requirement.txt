@@ -1,0 +1,137 @@
+1) What is PHP ?
+
+PHP personal Home Page
+
+PHP is an acronym for "PHP: Hypertext Preprocessor"
+
+PHP invent in 1994 by Rasmus Lerdorf
+
+PHP is a widely-used, open source server side scripting language
+
+PHP can generate dynamic page content
+
+PHP is a powerful tool for making dynamic and interactive Web pages.
+
+PHP scripts are executed on the server
+
+PHP is free to download and use
+
+PHP files can contain text, HTML, CSS, JavaScript, and PHP code
+
+PHP files have extension ".php"
+
+
+2) PHP features ?
+Simple
+Interpreted
+Faster
+Open Source
+Platform Independent
+Case Sensitive
+Speed Comparison of ASP PHP JSP
+Simplicity
+More frameworks & CMS
+
+3) Why did you choose PHP?
+
+PHP Inherit from c & c++ 
+
+PHP runs on various platforms (Windows, Linux, Unix, Mac OS X, etc.)
+
+PHP is compatible with almost all servers used today (Apache, IIS, etc.)
+
+PHP supports a wide range of databases
+
+PHP is free. Download it from the official PHP resource: www.php.net
+
+PHP is easy to learn and runs efficiently on the server side
+
+More frameworks & CMS
+
+
+
+
+4) What is new in PHP 7 ?
+PHP 7 is much faster than the previous popular stable release (PHP 5.6)
+PHP 7 has improved Error Handling
+PHP 7 supports stricter Type Declarations for function arguments
+PHP 7 supports new operators (like the spaceship operator: <=>)
+
+==============================================================================================
+
+
+PHP Requirement
+
+1) Server
+2) Database / Mysql
+3) PHP
+
+
+Software All in one XAMPP
+
+X Cross platform
+A Apache Server
+M Mysql
+P Perl
+P PHP
+
+
+WAMP : WINDOW OS
+MAMP : MAC OS
+LAMP : LINUX
+
+XAMPP : ALL OS SUPPORT   https://www.apachefriends.org/download.html 
+
+Note : install not in c drive
+
+XAMPP START
+
+XAMPP/contro-panel=> apache & mysqli  start
+
+
+=> mysql : http://localhost/phpmyadmin/
+
+
+=> PHP Fisrt page
+
+create page : demp.php 
+
+save in :  xampp/htdocts/sameer/demo.php
+
+Run : http://localhost/sameer/test.php
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
