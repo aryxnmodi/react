@@ -114,7 +114,7 @@ else
 
 
 $age=60
-switch($age)
+/*switch($age)
 {
 	case "60":
 	echo "ans is 10";
