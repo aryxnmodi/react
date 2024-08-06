@@ -1,10 +1,9 @@
 <!doctype html>
 
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-@php
+   @php
     $settings = \App\Models\Settings::pluck('value', 'key')->toArray();
 @endphp
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -42,35 +41,35 @@
 </head>
 
 <body class="clinic_version">
-
+ 
 
     <!-- LOADER -->
     <div id="preloader">
-        <a href="{{ url('/') }}"><img class="preloader" src="{{ config('app.url') }}images/loaders/heart-loading2.gif"
-                alt=""></a>
+        <a href="{{ url('/') }}"><img class="preloader" src="{{ config('app.url') }}images/loaders/heart-loading2.gif" alt=""></a>
     </div>
     <!-- END LOADER -->
     <header>
         <div class="header-top wow fadeIn">
             <div class="container">
+                <a class="navbar-brand" href="{{ url('/') }}"><img
+                        src="{{ config('app.url') . 'storage/' . $settings["logo"] }}"
+                        alt="logo image "></a>
                 <div class="right-header">
                     <div class="header-info">
                         <div class="info-inner">
-                            <span class="icontop"><img src="{{ config('app.url') }}images/phone-icon.png"
-                                    alt="#"></span>
+                            <span class="icontop"><img src="{{ config('app.url') }}images/phone-icon.png" alt="#"></span>
                             <span class="iconcont"><a
-                                    href="tel:{{ $settings["phone"] ?? '+91 9998889998' }}">{{ $settings["phone"] ?? '+91 9998889998' }}</a></span>
+                                    href="tel:{{ $settings["phone"] ?? '123 123 123' }}">{{ $settings["phone"] ?? '123 123 123' }}</a></span>
                         </div>
                         <div class="info-inner">
                             <span class="icontop"><i class="fa fa-envelope" aria-hidden="true"></i></span>
-                            <span class="iconcont"><a data-scroll href="mailto:{{ $settings[" email"]
-                                    ?? 'hmsindia@test.com' }}">{{ $settings["email"] ?? 'hmsindia@test.com'
-                                    }}</a></span>
+                            <span class="iconcont"><a data-scroll
+                                    href="mailto:{{ $settings["email"] ?? 'tauseed@test.com' }}">{{ $settings["email"] ?? 'tauseed@test.com' }}</a></span>
                         </div>
                         <div class="info-inner">
                             <span class="icontop"><i class="fa fa-clock-o" aria-hidden="true"></i></span>
                             <span class="iconcont"><a data-scroll href="#">Daily:
-                                    {{ $settings["working_hours"] ?? '08:00 AM - 05:00 PM' }}</a></span>
+                                    {{ $settings["working_horse"] ?? '7:00 AM - 8:00 PM' }}</a></span>
                         </div>
                     </div>
                 </div>
@@ -92,6 +91,8 @@
                                     href="{{ url('/services') }}">Services</a></li>
                             <li onclick="check_active('Doctors')"><a id="Doctors" data-scroll
                                     href="{{ url('docters') }}">Doctors</a></li>
+                            <li onclick="check_active('Departments')"><a id="Departments" data-scroll
+                                    href="#departments">Departments</a></li>
                             <li onclick="check_active('About')"><a id="About" data-scroll
                                     href="{{ url('/about') }}">About us</a></li>
                             <li onclick="check_active('Contact')"><a id="Contact" data-scroll
@@ -118,10 +119,9 @@
             <div class="row">
                 <div class="col-md-4">
                     <div class="logo padding">
-                        <a href="{{ url('/') }}"><img
-                                src="{{ 'storage/' . $settings["logo"] ?? config("app.url") . 'images/logo.png' }}"
+                        <a href="{{ url('/') }}"><img src="{{ 'storage/'.$settings["logo"] ??  config("app.url").'images/logo.png' }}"
                                 alt=""></a>
-                        <p>{{ $settings["description"] ?? 'hi this HMS for you.' }}
+                        <p>{{ $settings["description"] ?? 'hi this isLocavore pork belly scen ester pine est chill wave microdosing pop uple itarian cliche artisan.' }}
                         </p>
                     </div>
                 </div>
@@ -129,13 +129,13 @@
                     <div class="footer-info padding">
                         <h3>CONTACT US</h3>
                         <p><i class="fa fa-map-marker"
-                                aria-hidden="true"></i>{{ $settings["address"] ?? 'Green city, Gandhinagar' }}
+                                aria-hidden="true"></i>{{ $settings["address"] ?? 'distric abc P/O xyz sorana' }}
                         </p>
-                        <p><i class="fa fa-paper-plane" aria-hidden="true"></i>{{ $settings["email"] ??
-                            'hmsindia@test.com' }}
+                        <p><i class="fa fa-paper-plane"
+                                aria-hidden="true"></i>{{ $settings["email"] ?? 'tauseed@test.com' }}
                         </p>
-                        <p><i class="fa fa-phone" aria-hidden="true"></i>{{ $settings["phone"] ?? '+91 9998889998' }}
-                        </p>
+                        <p><i class="fa fa-phone"
+                                aria-hidden="true"></i>{{ $settings["phone"] ?? '123 123 123' }}</p>
                     </div>
                 </div>
                 @livewire('subscribe')
@@ -147,8 +147,8 @@
             <div class="row">
                 <div class="col-md-8">
                     <div class="footer-text">
-                        <p>© {{ date('Y') }} <a id="tw" href="{{ url('') }}" target="_blank">{{ env('APP_NAME') }}</a> ,
-                            Inc</p>
+                        <p>© {{ date('Y') }} <a id="tw" href="{{ url('') }}"
+                                target="_blank">{{ env('APP_NAME') }}</a> , Inc</p>
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -169,8 +169,7 @@
     <!-- end copyrights -->
     @livewireScripts
     <!-- all js files -->
-    {{--
-    <script src="js/all.js"></script> --}}
+    {{-- <script src="js/all.js"></script> --}}
     <script src="{{ asset('js/all-in-one.js') }}"></script>
     <!-- all plugins -->
     <script src="{{ asset('js/custom.js') }}"></script>
