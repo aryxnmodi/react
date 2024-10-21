@@ -1,0 +1,15 @@
+HTML: hypertext markup language: Tim Berners Lee
+https://www.goggle.com :> URL
+
+URI: uniform resource identifiers
+URL: uniform resource locator
+URN: uniform resource network
+
+WWW:> Sir Tim Bernes Lee
+Information exchange platform
+
+Operating System: Bundle of packages: Platform
+
+UI/UX: React JS
+Next Js
+
