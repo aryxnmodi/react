@@ -23,3 +23,21 @@ Chrome: V8
 Edge: Chakra
 Firefox: Spyder Monkey
 Safari: JavaScript Core
+
+
+JavaScript Data types:
+
+number
+boolean
+string
+array
+object
+null
+undefined
+symbol
+bigint
+
+Type casting:
+
+implicit
+explicit
