@@ -1,0 +1,49 @@
+HTML
+HTML tag
+form/table
+server browsers
+domain/ 
+Client server architecture
+FDP/FTP
+http
+List
+Form validation
+Logo
+
+CSS
+types
+framework
+Bootstrap: card list button
+container flood
+text color
+bg colour
+Grid: 12 row
+Model
+Alert
+
+SQL:
+define
+types: ddl(create, alter, drop, truncate) dml(insert, update, delete) dql(select) tcl(roll back, commit)
+
+Select: distinct, where, and or not
+Fetch: order by: ascending decending
+is null not null
+
+Aggregate function
+mean max count sum average
+
+Search: Like
+date: as between in 
+
+Advance SQL:
+joint: inner outer(left right full) cross
+
+Index: 
+Cursor(implicit(multiple) explicit(select))
+procedure 
+Trigger: before
+	     after: insert delete update
+
+Primary key
+Foreign key
+Unique key

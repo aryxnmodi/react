@@ -1,0 +1,50 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>
+        getting-height-width-image-using-javascript
+    </title>
+    <style>
+        h1 {
+            text-align: center;
+            letter-spacing: 1px;
+        }
+
+        img,
+        button {
+            display: block;
+            margin: 0 auto;
+        }
+
+        button {
+            font-size: large;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>
+        Image Of Cat Is Here
+    </h1>
+    <br>
+    <br>
+    <img src="https://img.freepik.com/free-photo/adorable-portrait-pet-surrounded-by-flowers_23-2151850055.jpg" alt="cat" id="image">
+    
+    <script>
+        function myFunc() {
+            let image = document.getElementById('image');
+            let height = document.getElementById('height');
+            let width = document.getElementById('width');
+
+            height.innerHTML += '<h1>height of image is :'
+                + image.clientHeight + 'px </h1>';
+
+            width.innerHTML += '<h1>width of image is :'
+                + image.clientWidth + 'px </h1>';
+        }
+    </script>
+</body>
+
+</html>

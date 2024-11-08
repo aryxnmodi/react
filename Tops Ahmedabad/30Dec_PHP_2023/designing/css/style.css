@@ -1,0 +1,18 @@
+		h1,h2,h3{
+			color:red;
+			background-color:green; 
+			text-transform:uppercase;
+		}
+		
+		.test1{
+			background-color:yellow;
+		}
+		
+		.text{
+			text-align:center;
+			text-decoration:underline;
+		}
+		
+		#test2{
+			background-color:red;
+		}
