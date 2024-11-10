@@ -1,77 +1,191 @@
-<!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content=
-        "width=device-width, initial-scale=1.0" />
-    <title>Form Validation</title>
-    <link rel="stylesheet" href="style.css" />
+<title> Student Registration Form </title>
+
+
+<script type="text/javascript">
+	
+	function validate(){
+
+		if(document.myForm.First_Name.value==""){
+
+			alert("Please provide First Name !");
+			document.myForm.First_Name.focus();
+			return false;
+		}
+
+		if(document.myForm.Last_Name.value==""){
+
+			alert("Please provide Last Name !");
+			document.myForm.Last_Name.focus();
+			return false;
+		}
+
+		if(document.myForm.Mobile.value==""){
+
+			alert("Please provide mobile number !!");
+			document.myForm.Mobile.focus();
+			return false;
+		}
+
+		if(document.myForm.Email.value==""){
+
+			alert("Please provide valid Email !!");
+			document.myForm.Email.focus();
+			return false;
+		}
+
+		if(document.myForm.Password.value==""){
+
+			alert("Please Enter Password !!");
+			document.myForm.Password.focus();
+			return false;
+		}
+
+		if(document.myForm.city.value==""){
+
+			alert("Please provide city");
+			document.myForm.city.focus();
+			return false;
+		}
+
+		if(document.myForm.state.value==""){
+
+			alert("Please Enter State !!");
+			document.myForm.state.focus();
+			return false;
+		}
+
+		return(true);
+
+			}
+
+
+</script>
+
+
+
 </head>
 
 <body>
-    <h1>REGISTRATION FORM</h1>
-    <form name="RegForm" onsubmit="return validateForm()">
-        <p>
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="Name" 
-                placeholder="Enter your full name" />
-            <span id="name-error" class="error-message"></span>
-        </p>
-        <p>
-            <label for="address">Address:</label>
-            <input type="text" id="address" name="Address" 
-                placeholder="Enter your address" />
-            <span id="address-error" class="error-message"></span>
-        </p>
-        <p>
-            <label for="email">E-mail Address:</label>
-            <input type="text" id="email" name="EMail" 
-                placeholder="Enter your email" />
-            <span id="email-error" class="error-message"></span>
-        </p>
-        <p>
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="Password" />
-            <span id="password-error" class="error-message"></span>
-        </p>
-        <p>
-            <label for="subject">Select Your Course:</label>
-            <select id="subject" name="Subject">
-                <option value="">
-                    Select Course
-                </option>
-                <option value="BTECH">
-                    BTECH
-                </option>
-                <option value="BBA">
-                    BBA
-                </option>
-                <option value="BCA">
-                    BCA
-                </option>
-                <option value="B.COM">
-                    B.COM
-                </option>
-            </select>
-            <span id="subject-error" class="error-message"></span>
-        </p>
-        <p>
-            <label for="comment">College Name:</label>
-            <textarea id="comment" name="Comment"></textarea>
-        </p>
-        <p>
-            <input type="checkbox" id="agree" name="Agree" />
-            <label for="agree">I agree to the above
-                information</label>
-            <span id="agree-error" class="error-message"></span>
-        </p>
-        <p>
-            <input type="submit" value="Send" name="Submit" />
-            <input type="reset" value="Reset" name="Reset" />
-        </p>
-    </form>
-    <script src="login.jss"></script>
+
+
+
+	<form action = "#" name = "myForm" onSubmit = "return (validate())";>
+
+<h3 align = "center"> STUDENT REGISTRATION FORM </h3>
+
+<table align = "center" cellpadding="9">
+
+<tr>
+<td> First Name : </td>
+<td>
+<input type = "text" name = "First_Name" placeholder="First Name" />
+</td>
+</tr>
+
+<tr>
+<td> Last Name : </td>
+<td>
+	<input type = "text" name ="Last_Name" placeholder="Last Name" />
+</td>
+
+</tr>
+
+<tr>
+	<td> Gender : </td>
+	<td> Male
+		<input type="radio" name="Gender" value="male" /> 
+	Female
+ 
+ <input type="radio" name="Gender" value="female" />
+	</td>
+</tr>
+
+
+<tr>
+	<td> Moblie No. </td>
+<td>
+      <input type="text" name="Mobile" placeholder="Moblie Number" />
+</td>
+</tr>
+
+<tr>
+	<td> Email : </td>
+	<td> <input type="text" name="Email" placeholder="Email Id" />
+	</td>
+</tr>
+
+
+<tr>
+	<td> Password : </td>
+	<td><input type="Password" name="Password" placeholder="Password" />
+	</td>
+</tr>
+
+
+<tr>
+	<td> Address : </td>
+
+<td>
+	<textarea name = "Address" rows="5" cols="20" placeholder="Address" />
+		
+	</textarea>
+</td>
+
+</tr>
+
+<tr>
+	<td> City :</td>
+
+<td>
+	<input type="text" name="city" placeholder="City" />
+</td>
+
+</tr>
+
+
+<tr>
+	<td> State : </td>
+<td>
+	<input type="text" name="state" placeholder="State" />
+</td>
+
+</tr>
+
+
+<tr>
+	<td> Country : </td>
+	<td>
+		<input type="text" name="Country" value="INDIA" readonly="readonly" />
+	</td>
+</tr>
+
+
+<tr>
+<td> Select Course :</td> <br>
+<td>
+Computer<input type="radio" name="Course" value="Computer" />
+
+Mechanical<input type="radio" name="Course" value="Mechanical" />
+
+Civil<input type="radio" name="Course" value="Civil" />
+</td>
+</tr>
+
+<tr>
+	<td align="right"> </td>
+	<td>
+<input type="Submit"  Value = "Submit"  />
+</td>
+</tr>
+
+
+</table>
+
+</form>
+<script src="login.js"></script>
+
 </body>
 
 </html>
