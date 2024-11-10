@@ -37,12 +37,15 @@ undefined
 symbol
 bigint
 
+<<<<<<< HEAD
 Decision Control Structure
 
 if 
 if else
 if else if else
 
+=======
+>>>>>>> origin/main
 Type casting:
 
 implicit
