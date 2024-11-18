@@ -39,3 +39,13 @@ function additionNumbers(x,y,z){
 
     const data = additionNumbers(2,3,4,5);
     console.log (`addtion of numbers are : ${data}`);
+
+
+const numbers = (1,2,3,4,5);
+const mynumbers = (3,4,5,6,7);
+console.log(mynumbers);
+
+const person = {name : "Aryan", age :21};
+
+const updatedata = {...person, age : 24, city : "surat"};
+console.log(updatedata);
