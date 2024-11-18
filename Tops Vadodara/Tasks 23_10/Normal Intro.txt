@@ -50,3 +50,15 @@ Type casting:
 
 implicit
 explicit
+
+Rest Parameter
+Spread Operator
+Templating
+
+
+Function:
+node Js : environment of JavaScript 
+Express Js : framework
+
+React Js : javascript Library
+Next Js : framework of React JS
