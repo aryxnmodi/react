@@ -10,10 +10,17 @@
 
 //function : map, filter, reduce
 
-const data = [2,3,4,5,6,7,8,9,12,13];
+//const data = [2,3,4,5,6,7,8,9,12,13];
 //const result = data.map((x)=> x*2);
 //console.log(result);
 
 
 //const result = data.filter((x)=> x>5);
 //console.log(result);
+
+const numbers = [2, 4, 6, 8, 10];
+
+
+const dividedNumbers = numbers.map(number => number / 2);
+
+console.log(dividedNumbers);
