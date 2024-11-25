@@ -49,3 +49,8 @@ const person = {name : "Aryan", age :21};
 
 const updatedata = {...person, age : 24, city : "surat"};
 console.log(updatedata);
+
+//array merge
+
+const result = [...mynumbers, ...numbers];
+console.log(result);
