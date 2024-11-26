@@ -18,9 +18,8 @@
 //const result = data.filter((x)=> x>5);
 //console.log(result);
 
-const numbers = [2, 4, 6, 8, 10];
+//const numbers = [2, 4, 6, 8, 10];
 
+//const dividedNumbers = numbers.map(number => number / 2);
 
-const dividedNumbers = numbers.map(number => number / 2);
-
-console.log(dividedNumbers);
+//console.log(dividedNumbers);
