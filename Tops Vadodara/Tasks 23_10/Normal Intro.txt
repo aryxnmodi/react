@@ -76,4 +76,3 @@ class: user defined data Type : collection of instances : template/blueprint
 object: instances of class / member of class
 constructor: initialize the object of class
 
-this keyword:
