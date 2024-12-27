@@ -76,3 +76,46 @@ class: user defined data Type : collection of instances : template/blueprint
 object: instances of class / member of class
 constructor: initialize the object of class
 
+JSON : javascript object notation
+[
+    {
+        id: 
+        name:
+    },
+    {
+
+    }
+]
+Promise 
+and thenables
+
+Promise
+then 
+then 
+then
+
+javascript: single threaded programming language
+
+asynchronus:
+
+task 1: 1 hr 
+task 2: 1 hr
+task 3: 30 min 
+
+asynchronus
+await
+
+fetch()
+then
+
+exception handling:
+
+api: application programming interface
+
+REST API: represtation state transfer applicati{on programming interface
+
+try{
+
+}catch{
+    
+}
