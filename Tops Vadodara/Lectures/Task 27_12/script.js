@@ -38,7 +38,6 @@ sequentialExcution();
     }
 }
 
-
 async function fetchpostinloop() {
     let postIds = [1, 2, 3];
     for (let id of postIds){
