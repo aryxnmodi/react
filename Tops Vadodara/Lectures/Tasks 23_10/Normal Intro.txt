@@ -1,0 +1,121 @@
+HTML: hypertext markup language: Tim Berners Lee
+Document object model: Boiler plates
+https://www.goggle.com :> URL
+
+URI: uniform resource identifiers
+URL: uniform resource locator
+URN: uniform resource network
+
+WWW: Sir Tim Bernes Lee
+Information exchange platform
+
+Operating System: Bundle of packages: Platform
+
+UI/UX: React JS
+Next JS
+
+Node JS: Node.js® is a free, open-source, cross-platform JavaScript runtime environment that lets developers create servers, web apps, command line tools and scripts.
+Developed by: Ryan Dahl: 2009
+
+React JS: Jordan Walke:2013
+JavaScript Library: Virtual document object model
+Chrome: V8
+Edge: Chakra
+Firefox: Spyder Monkey
+Safari: JavaScript Core
+
+
+JavaScript Data types:
+
+number
+boolean
+string
+array
+object
+null
+undefined
+symbol
+bigint
+
+<<<<<<< HEAD
+Decision Control Structure
+
+if 
+if else
+if else if else
+
+=======
+>>>>>>> origin/main
+Type casting:
+
+implicit
+explicit
+
+Rest Parameter
+Spread Operator
+Templating
+
+
+Function:
+node Js : environment of JavaScript 
+Express Js : framework
+
+React Js : javascript Library
+Next Js : framework of React JS
+
+
+Functional component: Hooks
+class based component: OOPs
+
+ES5 : proto Type
+ES6 : ES Next
+
+OOPs
+
+class: user defined data Type : collection of instances : template/blueprint
+object: instances of class / member of class
+constructor: initialize the object of class
+
+JSON : javascript object notation
+[
+    {
+        id: 
+        name:
+    },
+    {
+
+    }
+]
+Promise 
+and thenables
+
+Promise
+then 
+then 
+then
+
+javascript: single threaded programming language
+
+asynchronus:
+
+task 1: 1 hr 
+task 2: 1 hr
+task 3: 30 min 
+
+asynchronus
+await
+
+fetch()
+then
+
+exception handling:
+
+api: application programming interface
+
+REST API: represtation state transfer applicati{on programming interface
+
+try{
+
+}catch{
+    
+}
