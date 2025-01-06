@@ -18,3 +18,19 @@ class animal{
 
 const obj = new animal("ram, 25, 25000");
 obj.displayData("r & d", "senior");
+
+const user = {
+    name : aryan,
+    username : "aryanmodi",
+    password : "123456",
+
+    login : function(username, password){
+        if(username === this.username && password === this.password){
+            console.log("authentication successfull");
+    }else{("failed");
+    }
+    
+    },
+};
+
+user.login("aryanmodi", 123456);
