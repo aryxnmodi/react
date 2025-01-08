@@ -1,0 +1,135 @@
+1. Difference between rest and spread operator
+A. REST operator:
+	Collects multiple elements into one entity.
+	Produces an array or object.
+	Gathers values.
+   SPREAD operator:
+	Expands an entity into individual elements.
+	Produces an Individual element.
+	Spread values.
+
+2. Bitwise vs logical operator
+A. Bitwise Operators:
+	. Operate at the bit level of integer data types.
+	. Perform operations on the binary representations of numbers.
+	. Often used in low-level programming, such as manipulating data at the binary level, implementing flags, or 	optimizing performance.
+   Logical Operator:
+	Evaluate expressions to produce a Boolean result (true or false).
+	Work with logical conditions and short-circuit evaluation.
+	Common in conditional statements (if, while, etc.) and flow control.
+
+3. Decision control structure vs ternary operator
+A. Decision control structure:
+	Can handle multiple conditions and complex decision-making processes.
+	Often spans multiple lines for clarity.
+	Generally more readable for complex logic.
+	Preferred for scenarios requiring detailed logic or multiple conditions.
+    Ternary Operator:
+	Used for simple if-else cases where brevity is important.
+	Typically written on a single line.
+	Can reduce readability if overused or applied to complex logic.
+	Ideal for simple assignments or expressions with binary decisions.
+
+4. Explain map with 3 examples and their methods
+A. The map() method is an array method used to create a new array by applying a callback function to each element of an existing array. It does not modify the original array but returns a new one.
+	
+:Example 1: Basic Usage of Map
+
+const map = new Map();
+map.set('name', 'Aryan');
+map.set('age', 22);
+map.set('salary', 30000);
+
+console.log(map.get('name')); 
+// Output: Aryan
+console.log(map.get('age')); 
+// Output: 22
+
+// Check the size of the Map
+console.log(map.size); 
+// Output: 3
+
+:Example 2: Iterating Over a Map
+
+const map = new Map([
+  ['name', 'Aryan'],
+  ['age', 22],
+  ['profession', 'Developer']
+]);
+
+for (const [key, value] of map) {
+  console.log(`${key}: ${value}`);
+}
+
+// Output:
+// name: Aryan
+// age: 22
+// profession: Developer
+
+map.forEach((value, key) => {
+  console.log(`${key}: ${value}`);
+});
+
+:Example 3: Using Objects as Keys
+
+const obj1 = { id: 1 };
+const obj2 = { id: 2 };
+
+const map = new Map();
+map.set(obj1, 'Object 1');
+map.set(obj2, 'Object 2');
+
+
+console.log(map.get(obj1));
+ // Output: Object 1
+console.log(map.get(obj2));
+ // Output: Object 2
+
+// Check if a key exists
+console.log(map.has(obj1)); 
+// Output: true
+
+// Delete a key-value pair
+map.delete(obj1);
+console.log(map.has(obj1)); 
+// Output: false
+
+
+5. Explain filter, reduce and foreach with examples 
+A.  
+
+FILTER:
+The filter method is used to create a new array containing only the elements that satisfy a given condition (predicate function).
+	EXAMPLE:
+	const numbers = [1, 2, 3, 4, 5, 6];
+	const evenNumbers = numbers.filter(num => num % 2 === 0);
+	console.log(evenNumbers); // Output: [2, 4, 6]
+
+REDUCE:
+The reduce method is used to reduce an array to a single value by applying a reducer function on each element, carrying over a cumulative result (accumulator).
+
+	EXAMPLE:
+	const numbers = [1, 2, 3, 4, 5];
+	const sum = numbers.reduce((acc, num) => acc + num, 0);
+	console.log(sum); // Output: 15
+ForEach
+The forEach method executes a provided function once for each array element. It does not return anything and is typically used for side effects like logging or modifying external variables.
+
+	EXAMPLE:
+	const numbers = [1, 2, 3, 4, 5];
+	numbers.forEach(num => console.log(num));
+
+// Output:
+// 1
+// 2
+// 3
+// 4
+// 5
+	let sum = 0;
+	numbers.forEach(num => sum += num);
+	console.log(sum); 
+// Output: 15
+
+
+
+
