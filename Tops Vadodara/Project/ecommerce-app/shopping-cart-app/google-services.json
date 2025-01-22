@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1041802076420",
+    "project_id": "ecommero-app",
+    "storage_bucket": "ecommero-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1041802076420:android:cfdb968fd684fe3b2a7051",
+        "android_client_info": {
+          "package_name": "com.ecommero.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1041802076420-cuv79u69tphi3dk1e93hn7380ms6k4qh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB-d5SVek57MbEr0IP0e7bP5QAa4NS0DvA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1041802076420-cuv79u69tphi3dk1e93hn7380ms6k4qh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
