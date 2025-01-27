@@ -1,0 +1,24 @@
+
+Hooks:
+
+// Class based Component
+// functional Component
+
+// functional Component became the prefered way of writing react Componentwith the introduction of hooks in react 16.8
+
+
+useState Hook:
+// useState is a hook that allows you to have state variables in functional components. It returns an array with 2 elements. The first element is the current value of the state, and the second element is a state setter function. If you want to update the state, you call the setter function and pass in the new state value.
+// const [state, setState] = useState(initialState);
+
+Store:
+
+//store is a single javascript object that holds the entire state of your application
+
+actions:
+
+//actions are plain javascript object that describe what happened in your application
+
+Reducers:
+
+// Reducers are pure function that take the current state and an action as input and output.
