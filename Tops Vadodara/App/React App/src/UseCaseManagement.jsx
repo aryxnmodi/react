@@ -3,7 +3,7 @@ import { useState } from "react";
 const UseCaseManagement = props => {
     const [state, setState] = useState("initial state");
 
-    // setState("new state");
+    setState("new state");
     console.log(state);
 
     return(

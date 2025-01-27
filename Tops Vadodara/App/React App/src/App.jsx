@@ -1,10 +1,11 @@
+import TodoList from "./TodoList";
 
-import UseCaseManagement from "./UseCaseManagement";
 
 function App() {
     return (
         <>
-            <UseCaseManagement />
+        
+            <TodoList />
           </>
     );
   }
