@@ -1,0 +1,5 @@
+# Iteration: iteration is a general term taking each item of something, one after another. any time you use a loop, explicit or implicit, to go over a group of item, that is iteration
+
+# Iterator: an iterator is an object that allows access to a collection's elements one at a time.
+
+#Iterable: an Iterable is an object that can be looped through or iterated over one element  at a time.  
