@@ -1,11 +1,19 @@
-import TodoList from "./TodoList";
+// import TodoList from "./TodoList";
+// import Counter from "./Counter";
+// import UseCaseManagement from "./UseCaseManagement";
+// import ItemList from "./ItemList";
+import PriceCalculator from "./PriceCalculator";
 
 
 function App() {
     return (
         <>
         
-            <TodoList />
+            {/* <TodoList />
+            <Counter />
+            <UseCaseManagement />
+            <itemList /> */}
+            <PriceCalculator />
           </>
     );
   }
